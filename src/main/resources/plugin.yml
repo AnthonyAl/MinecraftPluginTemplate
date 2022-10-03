@@ -11,6 +11,6 @@ commands:
     aliases: lo
     permission: lorem
 permissions:
-  bossmobs:
+  lorem:
     description: Access to all LoremIpsum commands.
     default: op
