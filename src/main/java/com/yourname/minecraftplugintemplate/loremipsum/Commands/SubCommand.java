@@ -1,4 +1,4 @@
-package com.unipi.alexandris.minecraftplugintemplate.loremipsum.Commands;
+package com.yourname.minecraftplugintemplate.loremipsum.Commands;
 
 
 import org.bukkit.command.CommandSender;
@@ -18,5 +18,9 @@ public interface SubCommand {
 
     default boolean inGameOnly() {
         return false;
+    }
+
+    default String getPermissionNode() {
+        return "lorem.admin";
     }
 }

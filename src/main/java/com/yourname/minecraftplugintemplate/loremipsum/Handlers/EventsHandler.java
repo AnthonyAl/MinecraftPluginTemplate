@@ -1,6 +1,6 @@
-package com.unipi.alexandris.minecraftplugintemplate.loremipsum.Handlers;
+package com.yourname.minecraftplugintemplate.loremipsum.Handlers;
 
-import com.unipi.alexandris.minecraftplugintemplate.loremipsum.LoremIpsum;
+import com.yourname.minecraftplugintemplate.loremipsum.LoremIpsum;
 import org.bukkit.event.Listener;
 
 public final class EventsHandler implements Listener {

@@ -1,7 +1,7 @@
-package com.unipi.alexandris.minecraftplugintemplate.loremipsum.Commands;
+package com.yourname.minecraftplugintemplate.loremipsum.Commands;
 
-import com.unipi.alexandris.minecraftplugintemplate.loremipsum.Handlers.CommandsHandler;
-import org.bukkit.ChatColor;
+import com.yourname.minecraftplugintemplate.loremipsum.Core.Utils;
+import com.yourname.minecraftplugintemplate.loremipsum.Handlers.CommandsHandler;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -18,14 +18,15 @@ public class HelpCmd implements SubCommand {
 
     @Override
     public boolean onCommand(CommandSender sender, String[] args) {
-        sender.sendMessage("Command list:");
+        sender.sendMessage(Utils.parse("&r&7&lCommand List: &r"));
 
         for (SubCommand cmd : cmdHandler.getCommands()) {
-            if (cmd.inGameOnly() && !(sender instanceof Player)) {
-                continue;
-            }
+            if (cmd.inGameOnly() && !(sender instanceof Player)) continue;
+            if (!sender.hasPermission(cmd.getPermissionNode())) continue;
 
-            sender.sendMessage(ChatColor.GRAY + "  -" + ChatColor.AQUA + "/lorem " + cmd.getUsage() + ChatColor.GRAY + " - " + cmd.getDescription());
+            sender.sendMessage(Utils.parse("&7 -&b/lorem " + cmd.getUsage()));
+            sender.sendMessage(Utils.parse("&7 - " + cmd.getDescription() + "&r"));
+            sender.sendMessage(Utils.parse("&7 --- "));
         }
 
         return true;
@@ -44,5 +45,10 @@ public class HelpCmd implements SubCommand {
     @Override
     public String getDescription() {
         return "Shows this page.";
+    }
+
+    @Override
+    public String getPermissionNode() {
+        return "lorem.user";
     }
 }

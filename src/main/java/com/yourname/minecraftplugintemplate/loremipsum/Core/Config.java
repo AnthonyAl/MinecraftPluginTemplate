@@ -1,4 +1,4 @@
-package com.unipi.alexandris.minecraftplugintemplate.loremipsum.Core;
+package com.yourname.minecraftplugintemplate.loremipsum.Core;
 
 public class Config {
 

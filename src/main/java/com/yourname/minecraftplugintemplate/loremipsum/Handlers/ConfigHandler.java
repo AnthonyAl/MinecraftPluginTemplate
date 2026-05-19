@@ -1,7 +1,7 @@
-package com.unipi.alexandris.minecraftplugintemplate.loremipsum.Handlers;
+package com.yourname.minecraftplugintemplate.loremipsum.Handlers;
 
-import com.unipi.alexandris.minecraftplugintemplate.loremipsum.LoremIpsum;
-import com.unipi.alexandris.minecraftplugintemplate.loremipsum.Core.Config;
+import com.yourname.minecraftplugintemplate.loremipsum.LoremIpsum;
+import com.yourname.minecraftplugintemplate.loremipsum.Core.Config;
 import org.bukkit.configuration.file.FileConfiguration;
 
 @SuppressWarnings("unused")

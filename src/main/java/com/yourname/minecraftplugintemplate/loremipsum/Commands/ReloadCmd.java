@@ -1,7 +1,8 @@
-package com.unipi.alexandris.minecraftplugintemplate.loremipsum.Commands;
+package com.yourname.minecraftplugintemplate.loremipsum.Commands;
 
-import com.unipi.alexandris.minecraftplugintemplate.loremipsum.LoremIpsum;
-import com.unipi.alexandris.minecraftplugintemplate.loremipsum.Handlers.ConfigHandler;
+import com.yourname.minecraftplugintemplate.loremipsum.Core.Utils;
+import com.yourname.minecraftplugintemplate.loremipsum.LoremIpsum;
+import com.yourname.minecraftplugintemplate.loremipsum.Handlers.ConfigHandler;
 import org.bukkit.command.CommandSender;
 
 import java.util.Collections;
@@ -17,7 +18,7 @@ public class ReloadCmd implements SubCommand{
 
     @Override
     public boolean onCommand(CommandSender sender, String[] args) {
-        sender.sendMessage("Reloading Lorem ipsum.. .  . ");
+        sender.sendMessage(Utils.parse(LoremIpsum.getPrefix() + "&7Reloading Configuration Files..."));
         plugin.reloadConfig();
         plugin.config = new ConfigHandler(plugin);
         return true;
